@@ -54,7 +54,7 @@ function getCircleCircumference(radius) {
 function getAverage({ num1, num2 }) {
   const { MAX_VALUE } = Number;
   if (num1 > MAX_VALUE || num2 > MAX_VALUE || num1 + num2 > MAX_VALUE) {
-    throw new Error('Input numbers are too large and caused an overflow');
+    return 'Error';
   }
   const average = (num1 + num2) / 2;
   return Number.isFinite(average) && !Number.isNaN(average) ? average : NaN;
